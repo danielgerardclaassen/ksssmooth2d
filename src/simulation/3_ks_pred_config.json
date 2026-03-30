@@ -1,0 +1,59 @@
+{
+    "PARENT_DATASET_OPTIONS": {
+        "FILEPATH": "data/output/2DKS_DGP.h5",
+        "GROUPNAME": "kss_data_observed_obs_grid128",
+        "FIELD": "u_field_observed",
+        "TEMPORAL_COORDINATES": "time_points_observed",
+        "SPATIAL_COORDINATES": "node_coords_observed"
+    },
+    "SIMULATION_OPTIONS": {
+        "SPATIAL_RESOLUTION": [128, 84], 
+        "DT": 0.25,
+        "DOMAIN_SIZE_X": 40.0,
+        "DOMAIN_SIZE_Y": 27.0, 
+        "NEWTON_TOL": 1e-6,
+        "NEWTON_MAX_ITER": 10,
+        "AUGMENTED_ALPHA": 1e-9,
+        "MODEL_PARAMETERS": [
+            0.5
+        ],
+        "GP_PARAMETERS": [
+            0.75,
+            4.0,
+            128,
+            0.3
+        ],
+        "GP_LENGTH_GUIDANCE" : "if ell = 2.0, need 248 modes",
+        "NUM_FFBS_SAMPLES": 3
+    },
+    "SAVING_OPTIONS": {
+        "ENABLED": true,
+        "FILEPATH": "data/output/3_KS_PRED.h5",
+        "OVERWRITING": true,
+        "ADDITIONAL_TAG": "_128_075",
+        "METADATA": {
+            "PARAMETERS": {}
+        },
+        "DATASET_LABELS": {
+            "SPATIAL_COORDINATES": "u_spatial_coordinates_predicted",
+            "TEMPORAL_COORDINATES": "u_temporal_coordinates_predicted",
+            "PRIOR": {
+                "FIELD": "uw_prior_field",
+                "COVARIANCES": "uw_prior_covariances"
+            },
+            "POSTERIOR": {
+                "FIELD": "uw_posterior_field",
+                "COVARIANCES": "uw_posterior_covariances"
+            },
+            "SMOOTHED": {
+                "FIELD": "uw_smoothed_field",
+                "COVARIANCES": "uw_smoothed_covariances"
+            }
+        }
+    },
+    "LOGGING_OPTIONS": {
+        "ENABLED": true,
+        "FILEPATH": "filter_log.txt",
+        "LEVEL": "INFO"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "PARENT_DATASET_OPTIONS": {
+        "FILEPATH": "data/output/2DKS_DGP.h5",
+        "GROUPNAME": "kss_data",
+        "FIELD": "u_field",
+        "TEMPORAL_COORDINATES": "time_points",
+        "SPATIAL_COORDINATES": "node_coords"
+    },
+    "OBSERVATION_OPTIONS": {
+        "NUM_SPACE": 128,
+        "NUM_TIME": 133,
+        "LONGNUMTIMEOBS": 400,
+        "NOISE_STD": 0.3,
+        "SAMPLER": "static_grid",
+        "RANDOM_SEED": 42,
+        "TIME_TRUNCATION": 0.0,
+        "TRI_TEST": false
+    },
+    "SAVING_OPTIONS": {
+        "ENABLED": true,
+        "OVERWRITING": true,
+        "ADDITIONAL_TAG": "_obs_grid128",
+        "METADATA": {
+            "PARAMETERS": {}
+        },
+        "DATASET_LABELS": {
+            "FIELD": "u_field_observed",
+            "SPATIAL_COORDINATES": "node_coords_observed",
+            "TEMPORAL_COORDINATES": "time_points_observed"
+        }
+    }
+}

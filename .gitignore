@@ -1,0 +1,33 @@
+# --- Data and Outputs (The big stuff) ---
+data/
+output/
+results/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pvd
+*.vtu
+*.xdmf
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+build/
+dist/
+
+# --- VS Code ---
+.vscode/
+.history/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db

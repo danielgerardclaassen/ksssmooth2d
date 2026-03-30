@@ -1,0 +1,33 @@
+{
+    "SIMULATION_OPTIONS": {
+        "DOMAIN_SIZE_X": 40.0,
+        "DOMAIN_SIZE_Y": 27.0, 
+        "SPATIAL_RESOLUTION": [128, 84], 
+        "GOOD_T_MAX": 600,
+        "DT": 0.25,
+        "T_MAX": 200,
+        "KAPPA": 0.5,
+        "CONTROL_GAIN": 0.005,
+        "NEWTON_TOL": 1e-5,
+        "NEWTON_MAX_ITER": 10,
+        "AUGMENTED_ALPHA": 1e-9,
+        "RANDOM_SEED": 42
+    },
+    "SAVING_OPTIONS": {
+        "ENABLED": true,
+        "OVERWRITE": true,
+        "FILEPATH": "data/output/2DKS_DGP.h5",
+        "GROUPNAME": "kss_data_0.5",
+        "METADATA": {
+            "MODEL_NAME": "2D Kuramoto Sivashinsky Equation",
+            "NOTES": "Mixed FEM Formulation. Implicit Euler. DGP includes Drift.",
+            "TYPE": "DGP",
+            "PARAMETERS": {}
+        },
+        "DATASET_LABELS": {
+            "FIELD": "u_field",
+            "TEMPORAL_COORDINATES": "time_points",
+            "SPATIAL_COORDINATES": "node_coords"
+        }
+    }
+}
